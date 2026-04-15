@@ -61,16 +61,6 @@ export default function Footer() {
               }}
             >
               Inspección termográfica de parques solares con drones e IA.
-              <br />
-              Un servicio de{" "}
-              <a
-                href="https://nodera.cl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-nodera-link"
-              >
-                Nodera.cl
-              </a>
             </p>
           </div>
 

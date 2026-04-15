@@ -151,7 +151,6 @@ export default function ContactForm() {
             }}
           >
             {[
-              { icon: "✉", label: "Email", value: "hola@dronyx.cl" },
               { icon: "📍", label: "Operaciones", value: "Santiago, Chile" },
             ].map((item, i) => (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: 14 }}>

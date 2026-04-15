@@ -59,45 +59,6 @@ export default function Hero() {
           paddingTop: 80,
         }}
       >
-        {/* Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 8,
-            marginBottom: 32,
-            padding: "6px 14px",
-            border: "1px solid rgba(34, 197, 94, 0.25)",
-            borderRadius: 9999,
-            background: "rgba(34, 197, 94, 0.06)",
-          }}
-        >
-          <span
-            style={{
-              width: 6,
-              height: 6,
-              borderRadius: "50%",
-              background: "#22C55E",
-              display: "inline-block",
-            }}
-          />
-          <span
-            style={{
-              fontFamily: "var(--font-inter), system-ui, sans-serif",
-              fontSize: 12,
-              fontWeight: 500,
-              color: "#22C55E",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            Un servicio de Nodera.cl
-          </span>
-        </motion.div>
-
         {/* H1 */}
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
