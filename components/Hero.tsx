@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import DroneBackground from "./DroneBackground";
 
 const stats = [
   { value: "< 24h", label: "Reporte completo" },
@@ -47,6 +48,9 @@ export default function Hero() {
           pointerEvents: "none",
         }}
       />
+
+      {/* Drone decorative background */}
+      <DroneBackground />
 
       <div
         ref={ref}
