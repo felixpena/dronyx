@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 const plans = [
   {
     name: "Spot",
-    price: "Desde USD 1.200",
+    price: "Desde USD 2.500",
     period: "por inspección",
     description: "Para parques de hasta 10 MW o inspecciones puntuales.",
     features: [
@@ -21,7 +21,7 @@ const plans = [
   },
   {
     name: "Anual",
-    price: "Desde USD 8.500",
+    price: "Desde USD 14.900",
     period: "por año",
     description: "2 inspecciones anuales para parques de hasta 50 MW. El estándar para utilities.",
     features: [
