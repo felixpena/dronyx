@@ -260,7 +260,7 @@ export default function DroneBackground() {
       <div
         style={{
           position: "absolute",
-          left: "52%",
+          right: "5%",
           top: "50%",
           transform: "translateY(-50%)",
           width: 320,
@@ -275,12 +275,12 @@ export default function DroneBackground() {
             reduced
               ? {}
               : {
-                  x: [0, 50, 90, 60, 10, -30, -50, -20, 0],
-                  y: [0, -80, -30, 50, 90, 60, -20, -60, 0],
+                  x: [0, -180, -300, -200, -80, -250, -320, -150, 0],
+                  y: [0, -100, 20, 120, 80, -80, 30, -120, 0],
                 }
           }
           transition={{
-            duration: 18,
+            duration: 22,
             repeat: Infinity,
             ease: "easeInOut",
           }}
