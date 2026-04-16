@@ -252,64 +252,60 @@ export default function DroneBackground() {
 
   return (
     <>
-      {/* Primary drone — right side */}
-      <motion.div
+      {/*
+       * Outer div: anchors the base position (right: 10%, top: 50%, -50% translateY).
+       * Middle div: flight-path keyframes — wide roaming over 20s.
+       * Inner div: subtle float oscillation — gentle 9s rock layered on top.
+       */}
+      <div
         style={{
           position: "absolute",
-          right: "8%",
-          top: "15%",
+          right: "10%",
+          top: "50%",
+          transform: "translateY(-50%)",
           width: 320,
-          opacity: 0.18,
+          opacity: 0.28,
           zIndex: 0,
           pointerEvents: "none",
         }}
-        animate={
-          reduced
-            ? {}
-            : {
-                y: [0, -20, 0],
-                x: [0, 6, 0],
-                rotate: [0, 1.5, 0],
-              }
-        }
-        transition={{
-          duration: 9,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
       >
-        <DroneSVG size={320} phaseOffset={0} reduced={reduced} />
-      </motion.div>
-
-      {/* Secondary drone — left side, smaller */}
-      <motion.div
-        style={{
-          position: "absolute",
-          left: "3%",
-          bottom: "20%",
-          width: 160,
-          opacity: 0.07,
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-        animate={
-          reduced
-            ? {}
-            : {
-                y: [0, -14, 0],
-                x: [0, -5, 0],
-                rotate: [0, -1, 0],
-              }
-        }
-        transition={{
-          duration: 11,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2.5,
-        }}
-      >
-        <DroneSVG size={160} phaseOffset={1.5} reduced={reduced} />
-      </motion.div>
+        {/* Flight trajectory */}
+        <motion.div
+          animate={
+            reduced
+              ? {}
+              : {
+                  x: [0, 60, 120, 80, 20, -40, -20, 0],
+                  y: [0, -60, -20, 60, 100, 40, -40, 0],
+                }
+          }
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          {/* Gentle float / tilt */}
+          <motion.div
+            animate={
+              reduced
+                ? {}
+                : {
+                    y: [0, -12, 0],
+                    x: [0, 5, 0],
+                    rotate: [0, 1.5, 0],
+                  }
+            }
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <DroneSVG size={320} phaseOffset={0} reduced={reduced} />
+          </motion.div>
+        </motion.div>
+      </div>
     </>
   );
 }
