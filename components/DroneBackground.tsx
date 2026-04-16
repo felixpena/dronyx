@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 
-const GREEN = "#22C55E";
+const GREEN = "#4ADE80";
 
 interface DroneProps {
   size?: number;
@@ -253,18 +253,18 @@ export default function DroneBackground() {
   return (
     <>
       {/*
-       * Outer div: anchors the base position (right: 10%, top: 50%, -50% translateY).
-       * Middle div: flight-path keyframes — wide roaming over 20s.
+       * Outer div: anchors the base position (left: 52%, top: 50%, -50% translateY).
+       * Middle div: flight-path keyframes — wide roaming over 18s.
        * Inner div: subtle float oscillation — gentle 9s rock layered on top.
        */}
       <div
         style={{
           position: "absolute",
-          right: "10%",
+          left: "52%",
           top: "50%",
           transform: "translateY(-50%)",
           width: 320,
-          opacity: 0.28,
+          opacity: 0.45,
           zIndex: 0,
           pointerEvents: "none",
         }}
@@ -275,12 +275,12 @@ export default function DroneBackground() {
             reduced
               ? {}
               : {
-                  x: [0, 60, 120, 80, 20, -40, -20, 0],
-                  y: [0, -60, -20, 60, 100, 40, -40, 0],
+                  x: [0, 50, 90, 60, 10, -30, -50, -20, 0],
+                  y: [0, -80, -30, 50, 90, 60, -20, -60, 0],
                 }
           }
           transition={{
-            duration: 20,
+            duration: 18,
             repeat: Infinity,
             ease: "easeInOut",
           }}
