@@ -117,6 +117,27 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Sfumato badge */}
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: "32px auto 0",
+          paddingTop: 20,
+          borderTop: "1px solid rgba(34, 197, 94, 0.05)",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <a
+          href="https://www.sfumato.design"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sfumato-badge"
+        >
+          Diseñado por SFUMATO
+        </a>
+      </div>
+
       <style>{`
         .footer-nav-link {
           font-family: var(--font-inter), system-ui, sans-serif;
@@ -130,6 +151,17 @@ export default function Footer() {
         .footer-nav-link:hover { color: #E2F4E8; }
         .footer-nodera-link { color: #22C55E; text-decoration: none; }
         .footer-nodera-link:hover { text-decoration: underline; }
+        .sfumato-badge {
+          font-family: var(--font-inter), system-ui, sans-serif;
+          font-size: 11px;
+          font-weight: 400;
+          color: #3D5C3D;
+          text-decoration: none;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          transition: color 0.25s;
+        }
+        .sfumato-badge:hover { color: #22C55E; }
       `}</style>
     </footer>
   );
